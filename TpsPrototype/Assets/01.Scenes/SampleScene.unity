@@ -194,8 +194,8 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.1
-  m_VerticalDamping: 0.1
+  m_HorizontalDamping: 0.5
+  m_VerticalDamping: 0.5
   m_ScreenX: 0.5
   m_ScreenY: 0.85
   m_DeadZoneWidth: 0
@@ -387,7 +387,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.13112459, y: 0.0000000241234, z: -0.00000000319072, w: 0.9913659}
+  m_LocalRotation: {x: 0.13112459, y: -0.000000024123397, z: 0.0000000031907195, w: 0.9913659}
   m_LocalPosition: {x: 498.04, y: 10.50619, z: 460.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -634,7 +634,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669367661}
-  m_LocalRotation: {x: 0.13112459, y: 0.0000000241234, z: -0.00000000319072, w: 0.9913659}
+  m_LocalRotation: {x: 0.13112459, y: -0.000000024123397, z: 0.0000000031907195, w: 0.9913659}
   m_LocalPosition: {x: 0, y: 3.03, z: -4.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -742,4 +742,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  mouseSensitivity: 5
+  mouseSensitivity: 3

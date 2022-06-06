@@ -5,10 +5,14 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] float speed = 3f;
+    [SerializeField] float sprintmultiplier = 2f;
     [SerializeField] float mouseSensitivity = 5f;
 
     CharacterController ch = null;
     Animator anim = null;
+
+    float originSpeed = 0f;
+    float curSpeed = 0f;
 
     Vector3 move = Vector3.zero;
     Vector3 lastMouseInput = Vector3.zero;
@@ -27,8 +31,20 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        move.x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        move.z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (curSpeed == speed)
+                curSpeed *= sprintmultiplier;
+        }
+        else
+        {
+            curSpeed = speed;
+        }
+
+        anim.SetFloat("Speed", Mathf.Lerp(0.75f, 1.25f, curSpeed / (speed * sprintmultiplier)));
+
+        move.x = Input.GetAxis("Horizontal") * Time.deltaTime * curSpeed;
+        move.z = Input.GetAxis("Vertical") * Time.deltaTime * curSpeed;
 
         anim.SetBool("isMove", move != Vector3.zero);
 
