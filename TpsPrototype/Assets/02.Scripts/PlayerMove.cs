@@ -20,7 +20,6 @@ public class PlayerMove : MonoBehaviour
 
     Vector3 move = Vector3.zero;
     Vector3 playerVelocity = Vector3.zero;
-    Vector3 lastMouseInput = Vector3.zero;
 
     bool isJump = false;
 
